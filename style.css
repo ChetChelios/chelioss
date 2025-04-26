@@ -1,0 +1,136 @@
+/* Estilo general */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+    color: #00f9ff;
+    cursor: url('/static/images/mountain-cursor.png') 16 16, auto;
+}
+
+/* Navegación */
+nav {
+    width: 100%;
+    background: #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #00f9ff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00f9ff;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+}
+
+/* Sección de productos */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+
+.producto {
+    background: #1a1a1a;
+    border: 2px solid #00f9ff33;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 15px #00f9ff44;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00f9ff;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    color: #f39c12;
+    margin: 10px 0 5px;
+}
+
+.producto p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Pie de página */
+footer {
+    background: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Estela del cursor */
+.cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #00f9ff 30%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: lighten;
+    filter: blur(5px);
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chelios Futurista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about">Sobre nosotros</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>CHELIOS</h1>
+        <p>Componentes de otra galaxia.</p>
+    </header>
+
+    <main>
+        <div class="producto">
+            <img src="/static/images/grafica.png" alt="Tarjeta Gráfica">
+            <h3>Tarjeta Gráfica JK 1.0X</h3>
+            <p>Máximo poder para tus juegos y creaciones.</p>
+        </div>
+        <div class="producto">
+            <img src="/static/images/silla.jpg" alt="Silla Gamer">
+            <h3>Silla Gamer Ultimate</h3>
+            <p>Comodidad y estilo para tus largas sesiones.</p>
+        </div>
+        <div class="producto">
+            <img src="/static/images/procesador.jpg" alt="Procesador JOSTICK">
+            <h3>JOSTICK J1 1000QP</h3>
+            <p>El futuro del procesamiento gamer.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Chelios. Todos los derechos reservados.
+    </footer>
+
+    <div class="cursor-trail"></div>
+    <script src="{{ url_for('static', filename='cursor.js') }}"></script>
+</body>
+</html>
